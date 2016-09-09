@@ -1,5 +1,6 @@
 {
   "name": "ng2-translate",
+  "version": "2.3.4",
   "description": "An implementation of angular translate for Angular 2",
   "scripts": {
     "test": "tsc && karma start",
@@ -23,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/ocombe/ng2-translate/issues"
   },
-  "main": "ng2-translate.js",
+  "main": "ng2-translate.ts",
   "typings": "./ng2-translate.d.ts",
   "homepage": "https://github.com/ocombe/ng2-translate",
   "peerDependencies": {

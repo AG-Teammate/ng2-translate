@@ -614,15 +614,17 @@ System.registerDynamic("ng2-translate", ["@angular/core", "@angular/http", "./sr
         pipes: [translate_pipe_1.TranslatePipe],
         providers: [translate_service_1.TranslateService]
     };
+    function translateLoaderFactory(http) {
+        return new translate_service_1.TranslateStaticLoader(http);
+    }
+    exports.translateLoaderFactory = translateLoaderFactory;
     var TranslateModule = function () {
         function TranslateModule() {}
         TranslateModule.forRoot = function (providedLoader) {
             if (providedLoader === void 0) {
                 providedLoader = {
                     provide: translate_service_1.TranslateLoader,
-                    useFactory: function (http) {
-                        return new translate_service_1.TranslateStaticLoader(http);
-                    },
+                    useFactory: translateLoaderFactory,
                     deps: [http_1.Http]
                 };
             }
